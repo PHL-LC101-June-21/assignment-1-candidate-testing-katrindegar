@@ -56,7 +56,7 @@ function gradeQuiz(candidateAnswers) {
     console.log(">>> Status: PASED <<<");
   }
 
-  return grade;
+  return grade*20;
 }
 
 function runProgram() {
