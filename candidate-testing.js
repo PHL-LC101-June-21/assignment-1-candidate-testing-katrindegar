@@ -56,7 +56,7 @@ function gradeQuiz(candidateAnswers) {
     console.log(">>> Status: PASED <<<");
   }
   let grade;
-  grade = answer * 20 + "%";
+  grade = 5/answer * 100;
   console.log(grade);
   return grade;
 }
