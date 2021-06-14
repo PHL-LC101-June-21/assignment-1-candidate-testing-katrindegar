@@ -36,27 +36,28 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
-  let grade = 0; 
+  let answer = 0; 
   console.log('Candidate Name: ' + candidateName);
   for (let i = 0; i < 5; i++){
     //console.log(typeof(candidateAnswers[i]));
     //console.log(typeof(correctAnswers[i]));
     if (candidateAnswers[i] == correctAnswers[i]){
-        grade += 1;
+        answer += 1;
     }
     console.log((i+1) + ")" +questions[i]);
     console.log("Your Answer: " + candidateAnswers[i]);
     console.log("Correct Answer: " + correctAnswers[i]);
     console.log("");
   }
-  console.log(">>> Overall Grade: " + (grade*20) + "% (" + grade + " of 5 responses correct) <<<");
-  if (grade < 5){
+  console.log(">>> Overall Grade: " + (answer*20) + "% (" + answer + " of 5 responses correct) <<<");
+  if (answer < 5){
     console.log(">>> Status: FAILED <<<");
-  }else if (grade == 5){
+  }else if (answer == 5){
     console.log(">>> Status: PASED <<<");
   }
-
-  return grade*20;
+  let grade;
+  grade = answer * 20
+  return grade;
 }
 
 function runProgram() {
