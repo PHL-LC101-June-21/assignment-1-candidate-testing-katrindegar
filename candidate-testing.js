@@ -41,7 +41,7 @@ function gradeQuiz(candidateAnswers) {
   for (let i = 0; i < 5; i++){
     //console.log(typeof(candidateAnswers[i]));
     //console.log(typeof(correctAnswers[i]));
-    if (candidateAnswers[i] == correctAnswers[i]){
+    if (str.toUpperCase(candidateAnswers[i]) == str.toUpperCase(correctAnswers[i])){
         answer += 1;
     }
     console.log((i+1) + ")" +questions[i]);
