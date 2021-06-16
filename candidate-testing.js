@@ -36,11 +36,16 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
+  //set a number of correct answers to 0
   let answer = 0; 
+  //printing the name of the candidate
   console.log('Candidate Name: ' + candidateName);
+  //Set a loop to 5 passes for each question and answer
   for (let i = 0; i < 5; i++){
     //console.log(typeof(candidateAnswers[i]));
     //console.log(typeof(correctAnswers[i]));
+
+    //compare each candidate's answer with the correct one, and if the answer is correct, then we increase the counter of correct answers by 1
     if (candidateAnswers[i].toUpperCase() == correctAnswers[i].toUpperCase()){
         answer += 1;
     }
@@ -56,6 +61,7 @@ function gradeQuiz(candidateAnswers) {
     console.log(">>> Status: PASED <<<");
   }
   let grade;
+  //calculate the percentage of correct answers. Since we know the number of questions, we can calculate it like this answer*20
   grade = answer/5 * 100;
   console.log(grade);
   return grade;
